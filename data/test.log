@@ -1,0 +1,23 @@
+
+
+********************************************************************
+[Test Time] Wed Nov 12 12:02:35 CST 2014
+[Fen String] 1c1k1abR1/4a4/4b4/6NP1/4P4/2C1n1P2/r5p2/4B4/4A4/2BAK4 w - - 0 20
+   Deep =8,Used Time:0:1
+[Nodes] 0
+[AlphaNodes] 0
+[BetaNodes] 0
+[HashNodes] 0
+[KillerNodes] 0
+[LeafNodes] 0
+[NullNodes] 0
+[QuiescAlphaNodes] 0
+[QuiescBetaNodesNodes] 0
+[QuiescMateNodes] 0
+[QuiescNullNodes] 0
+[QuiescPvNodes] 0
+[HitAlpha] 0
+[HitBeta] 0
+[HitPv] 0
+[BetaNode] 0
+[BPS] 0[HashTable] length=131072, occupied=71476
