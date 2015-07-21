@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Audio.MP3;
 import defultSet.DefultSet;
 import whindow.ChessBoarderCanvas;
 import whindow.ChineseChessMainFrame;
@@ -21,6 +22,7 @@ import whindow.ChineseChessMainFrame;
 public class ChessPieceClick extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent arg0){
+		MP3 DoPieceSound = new MP3(ChineseChessMainFrame.class.getResource("/music/dopiece.mp3").getPath().substring(1),false);
 		int x,y;
 		x = arg0.getX();
 		y = arg0.getY();
@@ -63,6 +65,7 @@ public class ChessPieceClick extends MouseAdapter {
 							ChineseChessMainFrame.MyBoarder.p2 = new Point(x,y);
 							if (ChineseChessMainFrame.MyBoarder.PieceMove(ChineseChessMainFrame.MyBoarder.p1, ChineseChessMainFrame.MyBoarder.p2) == true){
 								//棋子可以移动
+								DoPieceSound.play();
 								System.out.println("棋子可以移动");
 								char Winner = ChineseChessMainFrame.MyBoarder.Winner();
 								if (Winner == '红'){
@@ -101,6 +104,7 @@ public class ChessPieceClick extends MouseAdapter {
 								ChineseChessMainFrame.MyBoarder.p2 = new Point(x,y);
 								if (ChineseChessMainFrame.MyBoarder.PieceEat(ChineseChessMainFrame.MyBoarder.p1, ChineseChessMainFrame.MyBoarder.p2) == true){
 									//棋子可以吃
+									DoPieceSound.play();
 									System.out.println("棋子可以吃");
 									char Winner = ChineseChessMainFrame.MyBoarder.Winner();
 									if (Winner == '红'){

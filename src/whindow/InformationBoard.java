@@ -43,7 +43,7 @@ public class InformationBoard extends JPanel{
 		//获取图片流的Graphics
 		Graphics2D g2d = BImage.createGraphics();
 		//绘制背景图片
-		g2d.drawImage(Toolkit.getDefaultToolkit().getImage(ChineseChessMainFrame.class.getResource("/imageLibary/InfBoard.png")), 0, 0,null);
+		g2d.drawImage(Toolkit.getDefaultToolkit().getImage(ChineseChessMainFrame.class.getResource("/imageLibary/InfBoard.png")), 0, 0,this);
 		//设置字体颜色
 		g2d.setColor(Color.white);
 		//设置字体
