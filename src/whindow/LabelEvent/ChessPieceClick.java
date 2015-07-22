@@ -22,7 +22,8 @@ import whindow.ChineseChessMainFrame;
 public class ChessPieceClick extends MouseAdapter {
 	@Override
 	public void mouseClicked(MouseEvent arg0){
-		MP3 DoPieceSound = new MP3(ChineseChessMainFrame.class.getResource("/music/dopiece.mp3").getPath().substring(1),false);
+		MP3 DoPieceSound = new MP3(ChineseChessMainFrame.class.getResource("/music/dopiece.wav").getPath().substring(1),false);
+		MP3 WinSound = new MP3(ChineseChessMainFrame.class.getResource("/music/win.wav").getPath().substring(1),false);
 		int x,y;
 		x = arg0.getX();
 		y = arg0.getY();
@@ -69,10 +70,12 @@ public class ChessPieceClick extends MouseAdapter {
 								System.out.println("棋子可以移动");
 								char Winner = ChineseChessMainFrame.MyBoarder.Winner();
 								if (Winner == '红'){
+									WinSound.play();
 									((ChessBoarderCanvas)arg0.getSource()).SendWinner('红');
 									ChineseChessMainFrame.InfBoard.AddLog("红方获得胜利!");
 								}
 								else if (Winner == '黑'){
+									WinSound.play();
 									((ChessBoarderCanvas)arg0.getSource()).SendWinner('黑');
 									ChineseChessMainFrame.InfBoard.AddLog("黑方获得胜利!");
 								}
@@ -108,10 +111,12 @@ public class ChessPieceClick extends MouseAdapter {
 									System.out.println("棋子可以吃");
 									char Winner = ChineseChessMainFrame.MyBoarder.Winner();
 									if (Winner == '红'){
+										WinSound.play();
 										((ChessBoarderCanvas)arg0.getSource()).SendWinner('红');
 										ChineseChessMainFrame.InfBoard.AddLog("红方获得胜利!");
 									}
 									else if (Winner == '黑'){
+										WinSound.play();
 										((ChessBoarderCanvas)arg0.getSource()).SendWinner('黑');
 										ChineseChessMainFrame.InfBoard.AddLog("黑方获得胜利!");
 									}

@@ -8,8 +8,5 @@
 	<classpathentry kind="lib" path="JMF/mp3plugin.jar"/>
 	<classpathentry kind="lib" path="JMF/multiplayer.jar"/>
 	<classpathentry kind="lib" path="JMF/sound.jar"/>
-	<classpathentry kind="lib" path="Mp3SPI/lib/jl1.0.jar"/>
-	<classpathentry kind="lib" path="Mp3SPI/lib/tritonus_share.jar"/>
-	<classpathentry kind="lib" path="Mp3SPI/mp3spi1.9.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
