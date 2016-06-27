@@ -2,8 +2,8 @@ package Audio;
 import javax.media.bean.playerbean.MediaPlayer;
 
 public class MP3 {
-    private String str; //mp3文件的位置
-    private MediaPlayer playMP3; //真正的存储MP3文件
+    private String str;
+    private MediaPlayer playMP3;
     
     public static void main(String[] args){
     	MP3 testMP3 = new MP3("d:/bgm.mp3");
